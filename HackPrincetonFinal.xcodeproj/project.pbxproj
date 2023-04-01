@@ -11,6 +11,8 @@
 		A8DBFBE829D7FE4C009D63FE /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = A8DBFBE729D7FE4C009D63FE /* FirebaseFirestoreCombine-Community */; };
 		A8DBFBEA29D7FE4C009D63FE /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A8DBFBE929D7FE4C009D63FE /* FirebaseFirestoreSwift */; };
 		A8DBFBEC29D7FF72009D63FE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A8DBFBEB29D7FF72009D63FE /* GoogleService-Info.plist */; };
+		B50CCC4F29D8955100A73071 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50CCC4E29D8955100A73071 /* HomeViewController.swift */; };
+		B50CCC5129D8B5BD00A73071 /* ChooseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50CCC5029D8B5BD00A73071 /* ChooseViewController.swift */; };
 		B59595AE29D7C79D006D0E0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59595AD29D7C79D006D0E0E /* AppDelegate.swift */; };
 		B59595B029D7C79D006D0E0E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59595AF29D7C79D006D0E0E /* SceneDelegate.swift */; };
 		B59595B229D7C79D006D0E0E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59595B129D7C79D006D0E0E /* ViewController.swift */; };
@@ -22,6 +24,8 @@
 
 /* Begin PBXFileReference section */
 		A8DBFBEB29D7FF72009D63FE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B50CCC4E29D8955100A73071 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		B50CCC5029D8B5BD00A73071 /* ChooseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseViewController.swift; sourceTree = "<group>"; };
 		B59595AA29D7C79D006D0E0E /* HackPrincetonFinal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackPrincetonFinal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B59595AD29D7C79D006D0E0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B59595AF29D7C79D006D0E0E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,8 +73,10 @@
 				A8DBFBEB29D7FF72009D63FE /* GoogleService-Info.plist */,
 				B59595AD29D7C79D006D0E0E /* AppDelegate.swift */,
 				B59595AF29D7C79D006D0E0E /* SceneDelegate.swift */,
+				B50CCC4E29D8955100A73071 /* HomeViewController.swift */,
 				B59595B129D7C79D006D0E0E /* ViewController.swift */,
 				B59595B329D7C79D006D0E0E /* Main.storyboard */,
+				B50CCC5029D8B5BD00A73071 /* ChooseViewController.swift */,
 				B59595B929D7C79F006D0E0E /* Assets.xcassets */,
 				B59595BB29D7C79F006D0E0E /* LaunchScreen.storyboard */,
 				B59595BE29D7C79F006D0E0E /* Info.plist */,
@@ -159,10 +165,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B50CCC4F29D8955100A73071 /* HomeViewController.swift in Sources */,
 				B59595B229D7C79D006D0E0E /* ViewController.swift in Sources */,
 				B59595AE29D7C79D006D0E0E /* AppDelegate.swift in Sources */,
 				B59595B829D7C79D006D0E0E /* HackPrincetonFinal.xcdatamodeld in Sources */,
 				B59595B029D7C79D006D0E0E /* SceneDelegate.swift in Sources */,
+				B50CCC5129D8B5BD00A73071 /* ChooseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
