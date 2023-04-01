@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A8DBFBE629D7FE4C009D63FE /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = A8DBFBE529D7FE4C009D63FE /* FirebaseFirestore */; };
+		A8DBFBE829D7FE4C009D63FE /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = A8DBFBE729D7FE4C009D63FE /* FirebaseFirestoreCombine-Community */; };
+		A8DBFBEA29D7FE4C009D63FE /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A8DBFBE929D7FE4C009D63FE /* FirebaseFirestoreSwift */; };
+		A8DBFBEC29D7FF72009D63FE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A8DBFBEB29D7FF72009D63FE /* GoogleService-Info.plist */; };
 		B59595AE29D7C79D006D0E0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59595AD29D7C79D006D0E0E /* AppDelegate.swift */; };
 		B59595B029D7C79D006D0E0E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59595AF29D7C79D006D0E0E /* SceneDelegate.swift */; };
 		B59595B229D7C79D006D0E0E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59595B129D7C79D006D0E0E /* ViewController.swift */; };
@@ -17,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A8DBFBEB29D7FF72009D63FE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B59595AA29D7C79D006D0E0E /* HackPrincetonFinal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackPrincetonFinal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B59595AD29D7C79D006D0E0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B59595AF29D7C79D006D0E0E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,6 +38,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8DBFBE629D7FE4C009D63FE /* FirebaseFirestore in Frameworks */,
+				A8DBFBE829D7FE4C009D63FE /* FirebaseFirestoreCombine-Community in Frameworks */,
+				A8DBFBEA29D7FE4C009D63FE /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +66,7 @@
 		B59595AC29D7C79D006D0E0E /* HackPrincetonFinal */ = {
 			isa = PBXGroup;
 			children = (
+				A8DBFBEB29D7FF72009D63FE /* GoogleService-Info.plist */,
 				B59595AD29D7C79D006D0E0E /* AppDelegate.swift */,
 				B59595AF29D7C79D006D0E0E /* SceneDelegate.swift */,
 				B59595B129D7C79D006D0E0E /* ViewController.swift */,
@@ -86,6 +95,11 @@
 			dependencies = (
 			);
 			name = HackPrincetonFinal;
+			packageProductDependencies = (
+				A8DBFBE529D7FE4C009D63FE /* FirebaseFirestore */,
+				A8DBFBE729D7FE4C009D63FE /* FirebaseFirestoreCombine-Community */,
+				A8DBFBE929D7FE4C009D63FE /* FirebaseFirestoreSwift */,
+			);
 			productName = HackPrincetonFinal;
 			productReference = B59595AA29D7C79D006D0E0E /* HackPrincetonFinal.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +128,9 @@
 				Base,
 			);
 			mainGroup = B59595A129D7C79D006D0E0E;
+			packageReferences = (
+				A8DBFBE429D7FE4C009D63FE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = B59595AB29D7C79D006D0E0E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -129,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B59595BD29D7C79F006D0E0E /* LaunchScreen.storyboard in Resources */,
+				A8DBFBEC29D7FF72009D63FE /* GoogleService-Info.plist in Resources */,
 				B59595BA29D7C79F006D0E0E /* Assets.xcassets in Resources */,
 				B59595B529D7C79D006D0E0E /* Main.storyboard in Resources */,
 			);
@@ -360,6 +378,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A8DBFBE429D7FE4C009D63FE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A8DBFBE529D7FE4C009D63FE /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A8DBFBE429D7FE4C009D63FE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		A8DBFBE729D7FE4C009D63FE /* FirebaseFirestoreCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A8DBFBE429D7FE4C009D63FE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreCombine-Community";
+		};
+		A8DBFBE929D7FE4C009D63FE /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A8DBFBE429D7FE4C009D63FE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		B59595B629D7C79D006D0E0E /* HackPrincetonFinal.xcdatamodeld */ = {
