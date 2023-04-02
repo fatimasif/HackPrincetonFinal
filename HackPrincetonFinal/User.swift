@@ -13,4 +13,5 @@ public struct User: Codable {
     let firstname: String
     let lastname: String
     let preferences: [String]
+    let minutes: [Int64]
 }

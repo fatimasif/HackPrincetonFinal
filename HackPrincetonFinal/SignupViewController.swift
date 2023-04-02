@@ -57,7 +57,7 @@ class SignupViewController: UIViewController {
             return
         }
         if !(phone.count==10) || !phone.allSatisfy({ character in character.isWholeNumber }) {
-            errorMsg.text = "Invalid phone number."
+            errorMsg.text = "Phone number must be exactly 10 digits."
             errorMsg.isHidden = false
             return
         }
@@ -83,7 +83,7 @@ class SignupViewController: UIViewController {
     }
     
     func createUser(email: String, firstname: String, lastname: String, phone: String, password: String) {
-        let user = User(email: email, phone: phone, firstname: firstname, lastname: lastname, preferences: [])
+        let user = User(email: email, phone: phone, firstname: firstname, lastname: lastname, preferences: [], minutes: [0, 0, 0, 0])
         Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
             if let err = error {
                 print("\(err)")
