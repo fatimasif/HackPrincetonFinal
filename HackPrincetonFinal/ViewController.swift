@@ -38,7 +38,7 @@ class SigninViewController: UIViewController {
         guard let email = emailField.text, !email.isEmpty else { return }
         guard let password = passField.text, !password.isEmpty else { return }
         if !(email.contains("@") && email.contains(".")) {
-            self.errorMsg.text = "Invalid email!"
+            self.errorMsg.text = "Invalid email or password!"
             self.errorMsg.isHidden = false
             return
         }
@@ -46,6 +46,8 @@ class SigninViewController: UIViewController {
             guard let strongSelf = self else { return }
             if let err = error {
                 let autherror = err as NSError
+                strongSelf.errorMsg.text = "Invalid email or password!"
+                strongSelf.errorMsg.isHidden = false
                 print("ERROR: \(autherror)")
             } else {
                 strongSelf.performSegue(withIdentifier: "homeSegue", sender: self)
