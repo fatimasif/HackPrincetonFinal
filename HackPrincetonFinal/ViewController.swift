@@ -11,7 +11,7 @@ import FirebaseFirestore
 import FirebaseFirestoreSwift
 import FirebaseAuth
 
-class SigninViewController: UserPrefsViewController {
+class SigninViewController: UIViewController {
     
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passField: UITextField!
@@ -36,36 +36,38 @@ class SigninViewController: UserPrefsViewController {
     @IBAction func login(_ sender: UIButton) {
         guard let email = emailField.text, !email.isEmpty else { return }
         guard let password = passField.text, !password.isEmpty else { return }
-        if !(email.contains("@") && email.contains(".")) {
-            self.errorMsg.text = "Invalid email or password!"
-            self.errorMsg.isHidden = false
-            return
-        }
-        let loginSuccess = signin(email: email, password: password)
-        if loginSuccess {
-            self.performSegue(withIdentifier: "homeSegue", sender: self)
-        } else {
-            self.errorMsg.text = "Invalid email or password!"
-            self.errorMsg.isHidden = false
+        Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
+            if let err = error {
+                let autherror = err as NSError
+                print("ERROR: \(autherror)")
+                self.errorMsg.text = "Invalid email or password!"
+                self.errorMsg.isHidden = false
+            } else {
+                UserPrefs.getUser(email: email) { () -> () in self.performSegue(withIdentifier: "homeSegue", sender: self)
+                }
+            }
         }
     }
     
+    @IBAction func back(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "backSegue", sender: self)
+    }
+    /*
     @IBAction func signup(_ sender: UIButton) {
         self.performSegue(withIdentifier: "signupSegue", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "signupSegue" {
+         if segue.identifier == "signupSegue" {
             let controller = segue.destination as! SignupViewController
             controller.email = self.emailField.text
             controller.password = self.passField.text
-        } else if segue.identifier == "homeSegue" {
-            let controller = segue.destination as! ChooseViewController
-            controller.email = self.emailField.text
+        }
+        if segue.identifier == "homeSegue" {
+            let controller = segue.destination as! AccountViewController
         }
     }
-    
-    var nameText=""
+    */
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lFh-EC-h9K">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lFh-EC-h9K">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -60,12 +61,12 @@
             </objects>
             <point key="canvasLocation" x="-772.46376811594212" y="-3.3482142857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Signin View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HackPrincetonFinal" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="SigninViewController" storyboardIdentifier="SigninViewController" id="BYZ-38-t0r" customClass="SigninViewController" customModule="HackPrincetonFinal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="anP-Z9-gTf">
@@ -79,10 +80,10 @@
                                 <rect key="frame" x="122" y="530" width="219" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z4e-7r-lCk">
-                                <rect key="frame" x="23" y="454" width="91" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z4e-7r-lCk">
+                                <rect key="frame" x="65" y="454" width="49" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="18"/>
                                 <nil key="textColor"/>
@@ -99,12 +100,6 @@
                                 <color key="textColor" red="0.3008248134" green="0.36785196520000002" blue="0.26610405770000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" currentPage="1" translatesAutoresizingMaskIntoConstraints="NO" id="jh1-Ir-fDr">
-                                <rect key="frame" x="114" y="689" width="187" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="pageIndicatorTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="currentPageIndicatorTintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </pageControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TXk-ys-9bQ">
                                 <rect key="frame" x="28" y="530" width="86" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -122,8 +117,27 @@
                                     <color key="baseBackgroundColor" red="0.1255330627" green="0.29534471649999999" blue="0.066508426750000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="logInButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PlQ-fB-Okd"/>
-                                    <segue destination="nR9-aF-NPj" kind="presentation" modalPresentationStyle="fullScreen" id="Q6u-P3-tCA"/>
+                                    <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tj0-Sp-hBf"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zdP-bO-EOE">
+                                <rect key="frame" x="33" y="724" width="349" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
+                                <color key="textColor" red="0.55496388799999996" green="0.18093401200000001" blue="0.14009622969999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TeN-mn-fg0">
+                                <rect key="frame" x="168" y="668" width="79" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.1255330627" green="0.29534471649999999" blue="0.066508426750000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Back">
+                                    <fontDescription key="titleFontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="15"/>
+                                    <color key="baseBackgroundColor" red="0.1255330627" green="0.29534471649999999" blue="0.066508426750000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="back:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fex-Xr-Xb6"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -132,10 +146,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="Ijx-gB-Z7r"/>
                     <connections>
-                        <outlet property="nameField" destination="Dmb-PJ-dGV" id="lxK-0i-SDr"/>
-                        <outlet property="textField" destination="anP-Z9-gTf" id="DX9-Lb-x4p"/>
-                        <outlet property="usernameField" destination="anP-Z9-gTf" id="Sy5-BN-ljf"/>
-                        <segue destination="nR9-aF-NPj" kind="presentation" identifier="name" modalPresentationStyle="fullScreen" id="VWz-UV-og0"/>
+                        <outlet property="emailField" destination="anP-Z9-gTf" id="Epu-cO-ibN"/>
+                        <outlet property="errorMsg" destination="zdP-bO-EOE" id="n1e-av-9R6"/>
+                        <outlet property="passField" destination="Dmb-PJ-dGV" id="l0j-g0-s62"/>
+                        <segue destination="a57-YL-982" kind="presentation" identifier="signupSegue" modalPresentationStyle="fullScreen" id="gRa-xC-d9L"/>
+                        <segue destination="nR9-aF-NPj" kind="presentation" identifier="homeSegue" modalPresentationStyle="fullScreen" id="Mq3-WD-3mx"/>
+                        <segue destination="6jo-ul-Hp6" kind="presentation" identifier="backSegue" modalPresentationStyle="fullScreen" id="dhj-7c-QSf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -282,8 +298,7 @@
                                     <color key="baseBackgroundColor" red="0.5" green="0.407907876" blue="0.23569835729999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="logInButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yDv-Tx-CaZ"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="66S-m1-ZGj"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="" id="66S-m1-ZGj"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WnK-s9-iKV">
@@ -296,8 +311,7 @@
                                     <color key="baseBackgroundColor" red="0.5" green="0.407907876" blue="0.23569835729999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="logInButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pcE-DB-gkK"/>
-                                    <segue destination="a57-YL-982" kind="show" id="eOV-I1-Nnd"/>
+                                    <action selector="signupPressed:" destination="6jo-ul-Hp6" eventType="touchUpInside" id="XB2-DW-sxG"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -305,17 +319,20 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" id="vH0-rc-pF4"/>
+                    <connections>
+                        <segue destination="a57-YL-982" kind="presentation" identifier="signupPressed" modalPresentationStyle="fullScreen" id="UX8-uC-t71"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xhb-1H-AxQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-775.36231884057975" y="688.39285714285711"/>
         </scene>
-        <!--Sign In View Controller-->
+        <!--Signup View Controller-->
         <scene sceneID="0jN-TN-H4F">
             <objects>
-                <viewController id="a57-YL-982" customClass="SignInViewController" customModule="HackPrincetonFinal" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="SignupViewController" storyboardIdentifier="SignupViewController" id="a57-YL-982" customClass="SignupViewController" customModule="HackPrincetonFinal" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="exp-Zg-Le6">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Personal Information" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0GS-LV-RRq">
@@ -333,7 +350,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Last Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q25-my-0iR">
-                                <rect key="frame" x="230" y="192" width="95" height="32"/>
+                                <rect key="frame" x="218" y="192" width="95" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="18"/>
                                 <color key="textColor" red="0.3008248134" green="0.36785196520000002" blue="0.26610405770000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -354,14 +371,14 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DIU-0t-JfW">
-                                <rect key="frame" x="230" y="232" width="164" height="34"/>
+                                <rect key="frame" x="218" y="232" width="164" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GhH-B2-lvE">
-                                <rect key="frame" x="20" y="325" width="374" height="34"/>
+                                <rect key="frame" x="20" y="325" width="362" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -375,7 +392,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EYb-Mj-YAJ">
-                                <rect key="frame" x="20" y="424" width="374" height="34"/>
+                                <rect key="frame" x="20" y="424" width="362" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -389,18 +406,18 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IuM-Rc-8SA">
-                                <rect key="frame" x="20" y="520" width="374" height="34"/>
+                                <rect key="frame" x="20" y="520" width="362" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DM4-hI-4ll">
-                                <rect key="frame" x="20" y="618" width="374" height="34"/>
+                                <rect key="frame" x="20" y="618" width="362" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Phone Number" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbe-n9-Q7P">
                                 <rect key="frame" x="20" y="384" width="136" height="32"/>
@@ -409,19 +426,6 @@
                                 <color key="textColor" red="0.3008248134" green="0.36785196520000002" blue="0.26610405770000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mbV-p6-eVB">
-                                <rect key="frame" x="28" y="686" width="349" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.1255330627" green="0.29534471649999999" blue="0.066508426750000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Create Account">
-                                    <fontDescription key="titleFontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
-                                    <color key="baseBackgroundColor" red="0.1255330627" green="0.29534471649999999" blue="0.066508426750000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <segue destination="a0A-Jk-h3r" kind="presentation" modalPresentationStyle="fullScreen" id="xH5-rC-8Sj"/>
-                                </connections>
-                            </button>
                             <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" currentPage="1" translatesAutoresizingMaskIntoConstraints="NO" id="wUk-2z-7jT">
                                 <rect key="frame" x="114" y="743" width="187" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -438,7 +442,27 @@
                                     <color key="baseBackgroundColor" red="0.1255330627" green="0.29534471649999999" blue="0.066508426750000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="lFh-EC-h9K" kind="presentation" modalPresentationStyle="fullScreen" id="t9H-m7-FWa"/>
+                                    <segue destination="6jo-ul-Hp6" kind="presentation" modalPresentationStyle="fullScreen" id="kGR-dr-XPm"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b8n-FZ-MQJ">
+                                <rect key="frame" x="33" y="817" width="349" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
+                                <color key="textColor" red="0.55496388799999996" green="0.18093401200000001" blue="0.14009622969999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mbV-p6-eVB">
+                                <rect key="frame" x="31" y="682" width="349" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.1255330627" green="0.29534471649999999" blue="0.066508426750000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Create Account">
+                                    <fontDescription key="titleFontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
+                                    <color key="baseBackgroundColor" red="0.1255330627" green="0.29534471649999999" blue="0.066508426750000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="signup:" destination="a57-YL-982" eventType="touchUpInside" id="FVG-qO-pqJ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -446,6 +470,16 @@
                         <color key="backgroundColor" red="0.86678878520000002" green="0.95354784150000005" blue="0.85766877450000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <navigationItem key="navigationItem" id="Ze3-47-T60"/>
+                    <connections>
+                        <outlet property="emailField" destination="GhH-B2-lvE" id="mBi-AU-jtR"/>
+                        <outlet property="errorMsg" destination="b8n-FZ-MQJ" id="Ckf-Ab-mRJ"/>
+                        <outlet property="firstField" destination="CBf-Vo-xz7" id="3ak-Lw-0gO"/>
+                        <outlet property="lastField" destination="DIU-0t-JfW" id="hUb-Dw-L5t"/>
+                        <outlet property="pass1Field" destination="IuM-Rc-8SA" id="Oex-6r-vRL"/>
+                        <outlet property="pass2Field" destination="DM4-hI-4ll" id="kIe-11-GnW"/>
+                        <outlet property="phoneField" destination="EYb-Mj-YAJ" id="KvG-fn-52A"/>
+                        <segue destination="a0A-Jk-h3r" kind="presentation" identifier="createSuccess" modalPresentationStyle="fullScreen" id="Pfi-qy-FIv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QCl-dw-bsF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -549,8 +583,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="VWz-UV-og0"/>
-        <segue reference="xH5-rC-8Sj"/>
+        <segue reference="gRa-xC-d9L"/>
+        <segue reference="kGR-dr-XPm"/>
+        <segue reference="Pfi-qy-FIv"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="account" width="500" height="500"/>

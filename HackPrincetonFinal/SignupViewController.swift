@@ -11,7 +11,7 @@ import FirebaseCore
 import FirebaseFirestore
 import FirebaseFirestoreSwift
 
-class SignupViewController: UserPrefsViewController {
+class SignupViewController: UIViewController {
     
     @IBOutlet weak var errorMsg: UILabel!
     @IBOutlet weak var firstField: UITextField!
@@ -21,6 +21,7 @@ class SignupViewController: UserPrefsViewController {
     @IBOutlet weak var pass1Field: UITextField!
     @IBOutlet weak var pass2Field: UITextField!
     
+    var db: Firestore!
     var email: String!
     var password: String!
 
@@ -55,6 +56,11 @@ class SignupViewController: UserPrefsViewController {
             errorMsg.isHidden = false
             return
         }
+        if !(phone.count==10) || !phone.allSatisfy({ character in character.isWholeNumber }) {
+            errorMsg.text = "Invalid phone number."
+            errorMsg.isHidden = false
+            return
+        }
         if pass1 != pass2 {
             errorMsg.text = "Passwords do not match."
             errorMsg.isHidden = false
@@ -71,6 +77,7 @@ class SignupViewController: UserPrefsViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        db = Firestore.firestore()
         emailField.text = email
         pass1Field.text = password
     }
@@ -85,7 +92,7 @@ class SignupViewController: UserPrefsViewController {
                 return
             } else {
                 self.addUser(user: user)
-                UserPrefsViewController.user = user
+                UserPrefs.user = user
                 self.performSegue(withIdentifier: "createSuccess", sender: self)
             }
         }

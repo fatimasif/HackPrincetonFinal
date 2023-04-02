@@ -8,6 +8,11 @@
 import UIKit
 
 class SecondViewController: UIViewController {
+    
+    
+    @IBAction func signupPressed(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "signupPressed", sender: self)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

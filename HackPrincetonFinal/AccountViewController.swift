@@ -8,15 +8,13 @@
 import UIKit
 
 class AccountViewController: UIViewController {
-    @IBOutlet weak var nameLabel:
-        UILabel!
     
-    var finalName = ""
+    @IBOutlet weak var nameLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        nameLabel.text = finalName
+        nameLabel.text = UserPrefs.user.firstname + " " + UserPrefs.user.lastname
 
         // Do any additional setup after loading the view.
     }
