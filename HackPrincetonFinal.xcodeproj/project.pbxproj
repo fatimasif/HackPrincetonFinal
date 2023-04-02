@@ -17,6 +17,8 @@
 		A8DBFBF529D8D2AD009D63FE /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = A8DBFBF429D8D2AD009D63FE /* FirebaseAuthCombine-Community */; };
 		A8DBFBFB29D90120009D63FE /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DBFBFA29D90120009D63FE /* SignupViewController.swift */; };
 		A8DBFBFD29D90C05009D63FE /* UserPrefsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DBFBFC29D90C05009D63FE /* UserPrefsViewController.swift */; };
+		A8DBFBFF29D94E2B009D63FE /* DragViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DBFBFE29D94E2B009D63FE /* DragViewController.swift */; };
+		A8DBFC0329D9579E009D63FE /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DBFC0229D9579E009D63FE /* CustomTableViewCell.swift */; };
 		B50CCC4F29D8955100A73071 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50CCC4E29D8955100A73071 /* HomeViewController.swift */; };
 		B50CCC5129D8B5BD00A73071 /* ChooseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50CCC5029D8B5BD00A73071 /* ChooseViewController.swift */; };
 		B50CCC5329D8D16900A73071 /* EnviViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50CCC5229D8D16900A73071 /* EnviViewController.swift */; };
@@ -38,6 +40,8 @@
 		A8DBFBEF29D8996D009D63FE /* Organizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Organizer.swift; sourceTree = "<group>"; };
 		A8DBFBFA29D90120009D63FE /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		A8DBFBFC29D90C05009D63FE /* UserPrefsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPrefsViewController.swift; sourceTree = "<group>"; };
+		A8DBFBFE29D94E2B009D63FE /* DragViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragViewController.swift; sourceTree = "<group>"; };
+		A8DBFC0229D9579E009D63FE /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		B50CCC4E29D8955100A73071 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B50CCC5029D8B5BD00A73071 /* ChooseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseViewController.swift; sourceTree = "<group>"; };
 		B50CCC5229D8D16900A73071 /* EnviViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnviViewController.swift; sourceTree = "<group>"; };
@@ -111,12 +115,14 @@
 				B50CCC5429D8E69500A73071 /* AccountViewController.swift */,
 				B50CCC5229D8D16900A73071 /* EnviViewController.swift */,
 				A8DBFBEF29D8996D009D63FE /* Organizer.swift */,
+				A8DBFC0229D9579E009D63FE /* CustomTableViewCell.swift */,
 				B50CCC5029D8B5BD00A73071 /* ChooseViewController.swift */,
 				A8DBFBFC29D90C05009D63FE /* UserPrefsViewController.swift */,
 				B59595B929D7C79F006D0E0E /* Assets.xcassets */,
 				B59595BB29D7C79F006D0E0E /* LaunchScreen.storyboard */,
 				B59595BE29D7C79F006D0E0E /* Info.plist */,
 				B59595B629D7C79D006D0E0E /* HackPrincetonFinal.xcdatamodeld */,
+				A8DBFBFE29D94E2B009D63FE /* DragViewController.swift */,
 			);
 			path = HackPrincetonFinal;
 			sourceTree = "<group>";
@@ -205,6 +211,7 @@
 			files = (
 				B50CCC5929D9198300A73071 /* SecondViewController.swift in Sources */,
 				B50CCC5729D8E6EE00A73071 /* SignInViewController.swift in Sources */,
+				A8DBFC0329D9579E009D63FE /* CustomTableViewCell.swift in Sources */,
 				B50CCC4F29D8955100A73071 /* HomeViewController.swift in Sources */,
 				B59595B229D7C79D006D0E0E /* ViewController.swift in Sources */,
 				A8DBFBFB29D90120009D63FE /* SignupViewController.swift in Sources */,
@@ -216,6 +223,7 @@
 				B50CCC5529D8E69600A73071 /* AccountViewController.swift in Sources */,
 				B59595B029D7C79D006D0E0E /* SceneDelegate.swift in Sources */,
 				B50CCC5129D8B5BD00A73071 /* ChooseViewController.swift in Sources */,
+				A8DBFBFF29D94E2B009D63FE /* DragViewController.swift in Sources */,
 				B50CCC5329D8D16900A73071 /* EnviViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

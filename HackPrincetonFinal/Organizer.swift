@@ -8,7 +8,9 @@
 import Foundation
 
 public struct Organizer: Codable {
-    let name: String
-    let causes: [String]
-    let mission: String
+    let title: String
+    let imageName: String
+    let cause: String
+    let description: String
+    let stars: Float64
 }

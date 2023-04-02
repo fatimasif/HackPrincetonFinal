@@ -32,22 +32,22 @@ class UserPrefs {
         }
     }
     
-    static func getOrganizers(cause: String) {
-        let causeDocs = db.collection("Organizations").whereField("causes", arrayContains: cause)
+    static func getOrganizers(cause: String, completion: @escaping () -> ()) {
+        print(cause)
+        let causeDocs = db.collection("Organizations").whereField("cause", isEqualTo: cause)//.order(by: "stars", descending: true)
         causeDocs.getDocuments() { (querySnapshot, error) in
-                if let err = error {
-                    print("ERROR: \(err)")
-                } else {
-                    for document in querySnapshot!.documents {
-                        do {
-                            try UserPrefs.orgList.append(document.data(as: Organizer.self))
-                        } catch {
-                            print("ERROR: \(error)")
-                        }
+            if let err = error {
+                print("ERROR: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    do {
+                        try UserPrefs.orgList.append(document.data(as: Organizer.self))
+                    } catch {
+                        print("ERROR: \(error)")
                     }
-                    
-                    print(UserPrefs.orgList)
                 }
             }
+            completion()
+        }
     }
 }
