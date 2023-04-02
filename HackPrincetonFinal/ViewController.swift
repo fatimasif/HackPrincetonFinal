@@ -9,28 +9,55 @@ import UIKit
 import FirebaseCore
 import FirebaseFirestore
 import FirebaseFirestoreSwift
+import FirebaseAuth
 
 class ViewController: UIViewController {
     @IBOutlet weak var textField:
         UITextField!
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var nameField: UITextField!
+class SigninViewController: UIViewController {
+    
+    @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var passField: UITextField!
     @IBOutlet weak var errorMsg: UILabel!
     
     var db: Firestore!
     var userProfile: User!
-    var orgList: [Organizer]!
+    // var orgList: [Organizer]!
     var count = 0
-    
+    /*
     @IBAction func savePrefs(_ sender: UIButton) {
-        guard let username = usernameField.text, !username.isEmpty else { return }
+        guard let email = emailField.text, !email.isEmpty else { return }
         guard let name = nameField.text, !name.isEmpty else { return }
-        if checkUser(username: username) {
-            modifyUser(username: username, name: name)
+        if checkUser(email: email) {
+            modifyUser(email: email, name: name)
         } else {
             count += 1
         }
-        getUser(username: username)
+        getUser(email: email)
+    }
+    */
+    
+    @IBAction func login(_ sender: UIButton) {
+        guard let email = emailField.text, !email.isEmpty else { return }
+        guard let password = passField.text, !password.isEmpty else { return }
+        if !(email.contains("@") && email.contains(".")) {
+            self.errorMsg.text = "Invalid email or password!"
+            self.errorMsg.isHidden = false
+            return
+        }
+        Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
+            guard let strongSelf = self else { return }
+            if let err = error {
+                let autherror = err as NSError
+                strongSelf.errorMsg.text = "Invalid email or password!"
+                strongSelf.errorMsg.isHidden = false
+                print("ERROR: \(autherror)")
+            } else {
+                strongSelf.performSegue(withIdentifier: "homeSegue", sender: self)
+            }
+        }
     }
     
     var nameText=""
@@ -39,8 +66,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         db = Firestore.firestore()
-        orgList = []
-        // getUser(username: "tigershark22")
+        // orgList = []
+        // getUser(email: "tigershark22")
         // print(userProfile.name)
     }
     
@@ -61,15 +88,16 @@ class ViewController: UIViewController {
         docRef.getDocument() { (querySnapshot, err) in
             if querySnapshot!.exists {
                 self.errorMsg.isHidden = false
+                self.errorMsg.text = "email already taken! (\(self.count))"
             }
         }
         return self.errorMsg.isHidden
     }
     
-    private func modifyUser(username: String, name: String) {
+    private func modifyUser(email: String, name: String) {
         // Add a new document with a generated ID
-        let user = User(username: username, name: name, preferences: ["animals"])
-        let docRef = db.collection("Users").document(username)
+        let user = User(email: email, fname: name, lname: name, preferences: [])
+        let docRef = db.collection("Users").document(email)
 
         do {
             try docRef.setData(from: user)
@@ -78,8 +106,9 @@ class ViewController: UIViewController {
         }
     }
     
-    private func getUser(username: String) {
-        let docRef = db.collection("Users").document(username)
+    /*
+    private func getUser(email: String) {
+        let docRef = db.collection("Users").document(email)
         
         docRef.getDocument(as: User.self) { result in
             switch result {
@@ -113,7 +142,7 @@ class ViewController: UIViewController {
                 }
             }
 
-    }
+    }*/
 }
 
 //@IBAction func logButton_ (_ sender: Any){
