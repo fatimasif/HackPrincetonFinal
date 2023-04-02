@@ -16,6 +16,9 @@
 		B50CCC4F29D8955100A73071 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50CCC4E29D8955100A73071 /* HomeViewController.swift */; };
 		B50CCC5129D8B5BD00A73071 /* ChooseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50CCC5029D8B5BD00A73071 /* ChooseViewController.swift */; };
 		B50CCC5329D8D16900A73071 /* EnviViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50CCC5229D8D16900A73071 /* EnviViewController.swift */; };
+		B50CCC5529D8E69600A73071 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50CCC5429D8E69500A73071 /* AccountViewController.swift */; };
+		B50CCC5729D8E6EE00A73071 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50CCC5629D8E6EE00A73071 /* SignInViewController.swift */; };
+		B50CCC5929D9198300A73071 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50CCC5829D9198300A73071 /* SecondViewController.swift */; };
 		B59595AE29D7C79D006D0E0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59595AD29D7C79D006D0E0E /* AppDelegate.swift */; };
 		B59595B029D7C79D006D0E0E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59595AF29D7C79D006D0E0E /* SceneDelegate.swift */; };
 		B59595B229D7C79D006D0E0E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59595B129D7C79D006D0E0E /* ViewController.swift */; };
@@ -32,6 +35,9 @@
 		B50CCC4E29D8955100A73071 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B50CCC5029D8B5BD00A73071 /* ChooseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseViewController.swift; sourceTree = "<group>"; };
 		B50CCC5229D8D16900A73071 /* EnviViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnviViewController.swift; sourceTree = "<group>"; };
+		B50CCC5429D8E69500A73071 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		B50CCC5629D8E6EE00A73071 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		B50CCC5829D9198300A73071 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		B59595AA29D7C79D006D0E0E /* HackPrincetonFinal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackPrincetonFinal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B59595AD29D7C79D006D0E0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B59595AF29D7C79D006D0E0E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +89,9 @@
 				B50CCC4E29D8955100A73071 /* HomeViewController.swift */,
 				B59595B129D7C79D006D0E0E /* ViewController.swift */,
 				B59595B329D7C79D006D0E0E /* Main.storyboard */,
+				B50CCC5829D9198300A73071 /* SecondViewController.swift */,
+				B50CCC5629D8E6EE00A73071 /* SignInViewController.swift */,
+				B50CCC5429D8E69500A73071 /* AccountViewController.swift */,
 				B50CCC5229D8D16900A73071 /* EnviViewController.swift */,
 				A8DBFBEF29D8996D009D63FE /* Organizer.swift */,
 				B50CCC5029D8B5BD00A73071 /* ChooseViewController.swift */,
@@ -174,12 +183,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B50CCC5929D9198300A73071 /* SecondViewController.swift in Sources */,
+				B50CCC5729D8E6EE00A73071 /* SignInViewController.swift in Sources */,
 				B50CCC4F29D8955100A73071 /* HomeViewController.swift in Sources */,
 				B59595B229D7C79D006D0E0E /* ViewController.swift in Sources */,
 				B59595AE29D7C79D006D0E0E /* AppDelegate.swift in Sources */,
 				B59595B829D7C79D006D0E0E /* HackPrincetonFinal.xcdatamodeld in Sources */,
 				A8DBFBF029D8996D009D63FE /* Organizer.swift in Sources */,
 				A8DBFBEE29D8832F009D63FE /* User.swift in Sources */,
+				B50CCC5529D8E69600A73071 /* AccountViewController.swift in Sources */,
 				B59595B029D7C79D006D0E0E /* SceneDelegate.swift in Sources */,
 				B50CCC5129D8B5BD00A73071 /* ChooseViewController.swift in Sources */,
 				B50CCC5329D8D16900A73071 /* EnviViewController.swift in Sources */,

@@ -11,7 +11,8 @@ import FirebaseFirestore
 import FirebaseFirestoreSwift
 
 class ViewController: UIViewController {
-    
+    @IBOutlet weak var textField:
+        UITextField!
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var errorMsg: UILabel!
@@ -32,6 +33,8 @@ class ViewController: UIViewController {
         getUser(username: username)
     }
     
+    var nameText=""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -40,6 +43,18 @@ class ViewController: UIViewController {
         // getUser(username: "tigershark22")
         // print(userProfile.name)
     }
+    
+    @IBAction func logInButton(_ sender: Any) {
+        self.nameText = textField.text!
+        performSegue(withIdentifier: "name", sender: self)
+
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        var vc = segue.destination as! AccountViewController
+        vc.finalName = self.nameText
+    }
+    
     
     private func checkUser(username: String) -> Bool {
         let docRef = db.collection("Users").document(username)
@@ -100,3 +115,7 @@ class ViewController: UIViewController {
 
     }
 }
+
+//@IBAction func logButton_ (_ sender: Any){
+//
+//}
