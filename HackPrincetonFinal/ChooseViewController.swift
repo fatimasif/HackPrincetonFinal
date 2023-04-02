@@ -8,6 +8,8 @@
 import UIKit
 
 class ChooseViewController: UIViewController {
+    
+    var email: String!
 
     override func viewDidLoad() {
         super.viewDidLoad()

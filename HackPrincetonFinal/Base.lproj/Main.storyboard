@@ -135,11 +135,12 @@
                                     <color key="baseBackgroundColor" red="0.1255330627" green="0.29534471649999999" blue="0.066508426750000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="a57-YL-982" kind="presentation" modalPresentationStyle="fullScreen" id="pai-rT-E5y"/>
+                                    <action selector="signup:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wCO-k8-z71"/>
+                                    <segue destination="a57-YL-982" kind="presentation" identifier="signupSegue" modalPresentationStyle="fullScreen" id="pai-rT-E5y"/>
                                 </connections>
                             </button>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Error message" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9rO-3b-cou">
-                                <rect key="frame" x="28" y="780" width="349" height="27"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Error message" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9rO-3b-cou">
+                                <rect key="frame" x="28" y="780" width="349" height="85"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="23"/>
                                 <color key="textColor" red="0.85883134664948457" green="0.099080149595211983" blue="0.01675153977864435" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -164,7 +165,7 @@
         <!--Choose View Controller-->
         <scene sceneID="Rdr-Jv-W0M">
             <objects>
-                <viewController id="a0A-Jk-h3r" customClass="ChooseViewController" customModule="HackPrincetonFinal" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="ChooseViewController" storyboardIdentifier="ChooseViewController" id="a0A-Jk-h3r" customClass="ChooseViewController" customModule="HackPrincetonFinal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1KE-qb-wp4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -272,10 +273,10 @@
             </objects>
             <point key="canvasLocation" x="798.55072463768124" y="-3.3482142857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Signup View Controller-->
         <scene sceneID="0jN-TN-H4F">
             <objects>
-                <viewController id="a57-YL-982" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignupViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="a57-YL-982" customClass="SignupViewController" customModule="HackPrincetonFinal" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="exp-Zg-Le6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -381,14 +382,31 @@
                                     <color key="baseBackgroundColor" red="0.1255330627" green="0.29534471649999999" blue="0.066508426750000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="a0A-Jk-h3r" kind="presentation" modalPresentationStyle="fullScreen" id="xH5-rC-8Sj"/>
+                                    <action selector="signup:" destination="a57-YL-982" eventType="touchUpInside" id="dWW-Z4-DH3"/>
                                 </connections>
                             </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4WY-XY-7Fo">
+                                <rect key="frame" x="24" y="781" width="357" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="23"/>
+                                <color key="textColor" red="0.55496388799999996" green="0.18093401200000001" blue="0.14009622969999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="EbW-M9-pxX"/>
                         <color key="backgroundColor" red="0.86678878520000002" green="0.95354784150000005" blue="0.85766877450000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <navigationItem key="navigationItem" id="Ze3-47-T60"/>
+                    <connections>
+                        <outlet property="emailField" destination="GhH-B2-lvE" id="EL9-Sp-hlL"/>
+                        <outlet property="errorMsg" destination="4WY-XY-7Fo" id="3du-2O-HtA"/>
+                        <outlet property="firstField" destination="CBf-Vo-xz7" id="b1f-OK-7Ld"/>
+                        <outlet property="lastField" destination="DIU-0t-JfW" id="Kwk-zn-Sw8"/>
+                        <outlet property="pass1Field" destination="IuM-Rc-8SA" id="4E9-LX-I0F"/>
+                        <outlet property="pass2Field" destination="DM4-hI-4ll" id="L5K-H6-onG"/>
+                        <outlet property="phoneField" destination="EYb-Mj-YAJ" id="i7F-S6-swd"/>
+                        <segue destination="a0A-Jk-h3r" kind="presentation" identifier="createSuccess" modalPresentationStyle="fullScreen" id="0cc-3P-KiW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QCl-dw-bsF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -412,7 +430,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="jdl-sv-eMB"/>
+        <segue reference="0cc-3P-KiW"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="animals" width="500" height="500"/>

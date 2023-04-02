@@ -15,6 +15,8 @@
 		A8DBFBF029D8996D009D63FE /* Organizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DBFBEF29D8996D009D63FE /* Organizer.swift */; };
 		A8DBFBF329D8D2AD009D63FE /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = A8DBFBF229D8D2AD009D63FE /* FirebaseAuth */; };
 		A8DBFBF529D8D2AD009D63FE /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = A8DBFBF429D8D2AD009D63FE /* FirebaseAuthCombine-Community */; };
+		A8DBFBFB29D90120009D63FE /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DBFBFA29D90120009D63FE /* SignupViewController.swift */; };
+		A8DBFBFD29D90C05009D63FE /* UserPrefsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DBFBFC29D90C05009D63FE /* UserPrefsViewController.swift */; };
 		B50CCC4F29D8955100A73071 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50CCC4E29D8955100A73071 /* HomeViewController.swift */; };
 		B50CCC5129D8B5BD00A73071 /* ChooseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50CCC5029D8B5BD00A73071 /* ChooseViewController.swift */; };
 		B50CCC5329D8D16900A73071 /* EnviViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50CCC5229D8D16900A73071 /* EnviViewController.swift */; };
@@ -31,6 +33,8 @@
 		A8DBFBEB29D7FF72009D63FE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A8DBFBED29D8832F009D63FE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A8DBFBEF29D8996D009D63FE /* Organizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Organizer.swift; sourceTree = "<group>"; };
+		A8DBFBFA29D90120009D63FE /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		A8DBFBFC29D90C05009D63FE /* UserPrefsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPrefsViewController.swift; sourceTree = "<group>"; };
 		B50CCC4E29D8955100A73071 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B50CCC5029D8B5BD00A73071 /* ChooseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseViewController.swift; sourceTree = "<group>"; };
 		B50CCC5229D8D16900A73071 /* EnviViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnviViewController.swift; sourceTree = "<group>"; };
@@ -92,12 +96,14 @@
 				B59595AD29D7C79D006D0E0E /* AppDelegate.swift */,
 				B59595AF29D7C79D006D0E0E /* SceneDelegate.swift */,
 				A8DBFBED29D8832F009D63FE /* User.swift */,
+				A8DBFBFA29D90120009D63FE /* SignupViewController.swift */,
 				B50CCC4E29D8955100A73071 /* HomeViewController.swift */,
 				B59595B129D7C79D006D0E0E /* ViewController.swift */,
 				B59595B329D7C79D006D0E0E /* Main.storyboard */,
 				B50CCC5229D8D16900A73071 /* EnviViewController.swift */,
 				A8DBFBEF29D8996D009D63FE /* Organizer.swift */,
 				B50CCC5029D8B5BD00A73071 /* ChooseViewController.swift */,
+				A8DBFBFC29D90C05009D63FE /* UserPrefsViewController.swift */,
 				B59595B929D7C79F006D0E0E /* Assets.xcassets */,
 				B59595BB29D7C79F006D0E0E /* LaunchScreen.storyboard */,
 				B59595BE29D7C79F006D0E0E /* Info.plist */,
@@ -190,8 +196,10 @@
 			files = (
 				B50CCC4F29D8955100A73071 /* HomeViewController.swift in Sources */,
 				B59595B229D7C79D006D0E0E /* ViewController.swift in Sources */,
+				A8DBFBFB29D90120009D63FE /* SignupViewController.swift in Sources */,
 				B59595AE29D7C79D006D0E0E /* AppDelegate.swift in Sources */,
 				B59595B829D7C79D006D0E0E /* HackPrincetonFinal.xcdatamodeld in Sources */,
+				A8DBFBFD29D90C05009D63FE /* UserPrefsViewController.swift in Sources */,
 				A8DBFBF029D8996D009D63FE /* Organizer.swift in Sources */,
 				A8DBFBEE29D8832F009D63FE /* User.swift in Sources */,
 				B59595B029D7C79D006D0E0E /* SceneDelegate.swift in Sources */,

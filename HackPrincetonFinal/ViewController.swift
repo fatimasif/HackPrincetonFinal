@@ -11,16 +11,15 @@ import FirebaseFirestore
 import FirebaseFirestoreSwift
 import FirebaseAuth
 
-class SigninViewController: UIViewController {
+class SigninViewController: UserPrefsViewController {
     
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passField: UITextField!
     @IBOutlet weak var errorMsg: UILabel!
     
-    var db: Firestore!
-    var userProfile: User!
+    // var userProfile: User!
     // var orgList: [Organizer]!
-    var count = 0
+    // var count = 0
     /*
     @IBAction func savePrefs(_ sender: UIButton) {
         guard let email = emailField.text, !email.isEmpty else { return }
@@ -42,28 +41,38 @@ class SigninViewController: UIViewController {
             self.errorMsg.isHidden = false
             return
         }
-        Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
-            guard let strongSelf = self else { return }
-            if let err = error {
-                let autherror = err as NSError
-                strongSelf.errorMsg.text = "Invalid email or password!"
-                strongSelf.errorMsg.isHidden = false
-                print("ERROR: \(autherror)")
-            } else {
-                strongSelf.performSegue(withIdentifier: "homeSegue", sender: self)
-            }
+        let loginSuccess = signin(email: email, password: password)
+        if loginSuccess {
+            self.performSegue(withIdentifier: "homeSegue", sender: self)
+        } else {
+            self.errorMsg.text = "Invalid email or password!"
+            self.errorMsg.isHidden = false
+        }
+    }
+    
+    @IBAction func signup(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "signupSegue", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "signupSegue" {
+            let controller = segue.destination as! SignupViewController
+            controller.email = self.emailField.text
+            controller.password = self.passField.text
+        } else if segue.identifier == "homeSegue" {
+            let controller = segue.destination as! ChooseViewController
+            controller.email = self.emailField.text
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        db = Firestore.firestore()
         // orgList = []
         // getUser(email: "tigershark22")
         // print(userProfile.name)
     }
-    
+    /*
     private func checkUser(email: String) -> Bool {
         let docRef = db.collection("Users").document(email)
         docRef.getDocument() { (querySnapshot, err) in
@@ -87,7 +96,7 @@ class SigninViewController: UIViewController {
         }
     }
     
-    /*
+    
     private func getUser(email: String) {
         let docRef = db.collection("Users").document(email)
         

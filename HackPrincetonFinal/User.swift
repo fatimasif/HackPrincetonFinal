@@ -9,7 +9,8 @@ import Foundation
 
 public struct User: Codable {
     let email: String
-    let fname: String
-    let lname: String
+    let phone: String
+    let firstname: String
+    let lastname: String
     let preferences: [String]
 }
