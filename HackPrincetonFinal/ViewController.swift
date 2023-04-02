@@ -65,6 +65,8 @@ class SigninViewController: UserPrefsViewController {
         }
     }
     
+    var nameText=""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -75,6 +77,21 @@ class SigninViewController: UserPrefsViewController {
     /*
     private func checkUser(email: String) -> Bool {
         let docRef = db.collection("Users").document(email)
+    
+    @IBAction func logInButton(_ sender: Any) {
+        self.nameText = textField.text!
+        performSegue(withIdentifier: "name", sender: self)
+
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        var vc = segue.destination as! AccountViewController
+        vc.finalName = self.nameText
+    }
+    
+    
+    private func checkUser(username: String) -> Bool {
+        let docRef = db.collection("Users").document(username)
         docRef.getDocument() { (querySnapshot, err) in
             if querySnapshot!.exists {
                 self.errorMsg.isHidden = false
@@ -134,3 +151,7 @@ class SigninViewController: UserPrefsViewController {
 
     }*/
 }
+
+//@IBAction func logButton_ (_ sender: Any){
+//
+//}
